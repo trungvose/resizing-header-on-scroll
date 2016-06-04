@@ -1,7 +1,7 @@
 ###Shrinking Navigation Bar When Scrolling Down - Bootstrap 3 Navigation & jQuery
 Demo: http://trungk18.github.io/demo/resize-header-on-scroll.html
 
-In this template, I will show you how to create an animated fixed navigation that will resize on scroll and when you scroll down the page a bit, the header resizes smaller with CSS3 animations, and gets back bigger when you scroll back to the top with just simple CSS3 animation and jQuery.
+In this template, I will show you how to create an animated fixed navigation that will resize on scroll and when you scroll down the page a bit, the header resizes smaller, and gets back bigger when you scroll back to the top with just simple CSS3 animation and jQuery.
 
 ####Sticky Navigation
 
