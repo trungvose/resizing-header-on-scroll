@@ -61,78 +61,78 @@ Class .navbar-default was set the padding top and down for 30px each, and the tr
 Finally, I added some example media queries so that our animated resizing navigation will work only in medium devices desktops [Bootstrap standard grid](http://getbootstrap.com/css/#grid). 
 
 ```css
-       @media screen and (min-width: 992px) {
+    @media screen and (min-width: 992px) {
 
-            .navbar-default {
-                padding: 30px 0;
-                transition: padding 0.3s;
+        .navbar-default {
+            padding: 30px 0;
+            transition: padding 0.3s;
+        }
+
+            .navbar-default.navbar-shrink {
+                padding: 10px 0;
             }
+    }
 
-                .navbar-default.navbar-shrink {
-                    padding: 10px 0;
-                }
+    .navbar-default a {
+        color: #4D4D4D;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        line-height: 42px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .navbar-default a.brand > img {            
+        max-width: 70px;
+    }
+
+        .navbar-default a.active {
+            color: #2dbccb;
         }
 
-        .navbar-default a {
-            color: #4D4D4D;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-transform: uppercase;
-            text-decoration: none;
-            line-height: 42px;
-            font-weight: 700;
-            font-size: 20px;
-        }
 
-        .navbar-default a.brand > img {            
-            max-width: 70px;
-        }
+    .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 
-            .navbar-default a.active {
-                color: #2dbccb;
-            }
-
-
-        .content {
-            position: absolute;
+        .content > section {
             width: 100%;
             height: 100%;
         }
 
-            .content > section {
-                width: 100%;
-                height: 100%;
-            }
+    #portfolio {
+        background: #2dbccb;
+    }
 
-        #portfolio {
-            background: #2dbccb;
-        }
+    #about {
+        background-color: #eb7e7f;
+    }
 
-        #about {
-            background-color: #eb7e7f;
-        }
-
-        #contact {
-            background-color: #415c71;
-        }
+    #contact {
+        background-color: #415c71;
+    }
 ```
 
 To make it happen, I am going to use jQuery to add and remove the class *navbar-shrink* when we scroll a certain amount (in this situation is 50px). Adding and removing this class will animate the navbar.
 
 ```javascript
-        $(document).ready(function () {
-            $(window).scroll(function () {
+    $(document).ready(function () {
+        $(window).scroll(function () {
 
-                //Method 1: Using addClass and removeClass
-                //if ($(document).scrollTop() > 50) {
-                //    $('.navbar-default').addClass('navbar-shrink');
-                //} else {
-                //    $('.navbar-default').removeClass('navbar-shrink');
-                //}
+            //Method 1: Using addClass and removeClass
+            //if ($(document).scrollTop() > 50) {
+            //    $('.navbar-default').addClass('navbar-shrink');
+            //} else {
+            //    $('.navbar-default').removeClass('navbar-shrink');
+            //}
 
-                //Method 2: Using toggleClass
-                $(".navbar-default").toggleClass("navbar-shrink", $(this).scrollTop() > 50)
-            });
+            //Method 2: Using toggleClass
+            $(".navbar-default").toggleClass("navbar-shrink", $(this).scrollTop() > 50)
         });
+    });
 ```
 We can use [toggleClass](http://api.jquery.com/toggleclass/) with 2 parameter. 
 - The *first parameter* will be the target element.
