@@ -10,7 +10,7 @@ In this template, I will show you how to create an animated fixed navigation tha
 Official documentation:
 http://getbootstrap.com/components/#navbar-fixed-top
  
-Let�s now take a look at our HTML markup. The markup consists of a header with a logo and navigation, some sections with color difference only. 
+Let's now take a look at our HTML markup. The markup consists of a header with a logo and navigation, some sections with color difference only. 
 
 ```html
 <!-- Navigation -->
@@ -139,5 +139,5 @@ We can use [toggleClass](http://api.jquery.com/toggleclass/) with 2 parameter.
 - The *second parameter* for determining whether the class should be added or removed. If this parameter's value is true, then the class is added; if false, the class is removed.
 
 ####Conclusion
-Nowadays it is not really hard to search for component we need to use in our front-end project, but the most important thing is you can understand how it�s worked and you can easily implement this animated resizing header into your next project.�
+Nowadays it is not really hard to search for component we need to use in our front-end project, but the most important thing is you can understand how it's worked and you can easily implement this animated resizing header into your next project.
 Thanks for checking it out and view the demo, feel free to fork and fix the source code then pull back to me.
